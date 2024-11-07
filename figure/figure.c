@@ -1,60 +1,76 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void linea();
-void quadrato();
-void triangolo ();
+void linea(char l);
+void quadrato(char l);
+void triangolo (char l);
 
 
 
 int main()
 {
-   char input;
-   printf("inserisci la sequenza di caratteri");
-   input = getchar();
-   while (getchar() != '\n')
+   char input = 0;
+   char n = 0;
+   printf("inserisci la sequenza di caratteri\n");
+   while ((input=getchar()) != '\n')
    {
+      n = getchar();
+      n = n - '0';
+      if ((n<1) || (n>9))
+      {
+         return EXIT_FAILURE;
+      }
+      
+
+
       switch (input)
       {
       case 'Q':
       case 'q':
-         // funzione quadrato
+        quadrato (n);
+        printf("\n");
          break;
       case 'L':
       case 'l':
-            //funzione linea
+            linea(n);
+            printf("\n");
          break;
       case 't':
       case 'T':
-      // funzione triangolo
+            triangolo(n);
+            printf("\n");
       default:
             }
    }
    return EXIT_SUCCESS;
 }
 
-void linea()
+void linea(char l)
 {
-   char l;
-   l = getchar();
-   l = l - 48;
    for (int i = 0; i < l; i++)
    {
-      printf('*');
+      printf("*");
    }
    
 }
-void quadrato()
+void quadrato(char l)
 {
- 
-   char l;
-   l = getchar();
-   l = l - 48;
    for (int i = 0; i < l; i++)
    {
-      
+      linea(l);
+      printf("\n");
    }
    
   
      
+}
+
+void triangolo (char l)
+{
+   for (int i = 0; i < l+1; i++)
+   {
+      linea(i);
+      printf("\n");
+   }
+   
 }
