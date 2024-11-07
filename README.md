@@ -1,2 +1,2 @@
 # FPDSA
-Exercises or FPDSA
+Exercises for FPDSA
