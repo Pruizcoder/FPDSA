@@ -17,17 +17,27 @@ void contagiorni(int g, int m, int a, int *contagiorni);
 int main()
 {
    //variablili di conteggio
-   int totgiorni;
+   int totgiorni = 0;
    //varaibili di input
-   int g, m, a;
+   int g = 0;
+   int  m = 0;
+   int  a = 0;
+
 
    printf ("Inserire la data (g m a): ");
    scanf ("%d %d %d", &g, &m, &a);
 
    if (checkdate (g, m, a))
+   {
       printf ("data corretta\n");
+   }
    else
+   {
       printf ("data errata\n");
+   }
+   contagiorni(g, m , a, &totgiorni);
+   
+   printf("%d\n", totgiorni);
 
    return EXIT_SUCCESS;
 }
@@ -82,8 +92,8 @@ void contagiorni(int g, int m, int a, int *contagiorni)
    int mese = 1;
    while (mese<m)
    {
-   contagiorni = contagiorni + giorni_del_mese(m,a);
+   *contagiorni = *contagiorni + giorni_del_mese(mese,a);
+   mese++;
    }
-   contagiorni = contagiorni + g;
-
+   *contagiorni = *contagiorni + g;
 }
