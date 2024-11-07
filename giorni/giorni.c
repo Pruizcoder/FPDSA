@@ -29,11 +29,12 @@ int main()
 
    if (checkdate (g, m, a))
    {
-      printf ("data corretta\n");
+      printf ("valida");
    }
    else
    {
-      printf ("data errata\n");
+      printf ("non valida\n");
+      return EXIT_FAILURE;
    }
    contagiorni(g, m , a, &totgiorni);
    
