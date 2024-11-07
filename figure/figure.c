@@ -11,7 +11,7 @@ int main()
 {
    char input = 0;
    char n = 0;
-   printf("inserisci la sequenza di caratteri\n");
+   //printf("inserisci la sequenza di caratteri\n");
    while ((input=getchar()) != '\n')
    {
       n = getchar();
@@ -28,19 +28,22 @@ int main()
       case 'Q':
       case 'q':
         quadrato (n);
-        printf("\n");
+        
          break;
       case 'L':
       case 'l':
             linea(n);
-            printf("\n");
+            
          break;
       case 't':
       case 'T':
             triangolo(n);
-            printf("\n");
+            
       default:
+            return EXIT_FAILURE;
             }
+            printf("\n");
+            
    }
    return EXIT_SUCCESS;
 }
@@ -51,6 +54,7 @@ void linea(char l)
    {
       printf("*");
    }
+      printf("\n");
    
 }
 void quadrato(char l)
@@ -58,7 +62,6 @@ void quadrato(char l)
    for (int i = 0; i < l; i++)
    {
       linea(l);
-      printf("\n");
    }
    
   
@@ -70,7 +73,6 @@ void triangolo (char l)
    for (int i = 0; i < l+1; i++)
    {
       linea(i);
-      printf("\n");
    }
    
 }
