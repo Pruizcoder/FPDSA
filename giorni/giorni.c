@@ -82,10 +82,14 @@ int giorni_del_mese (int mese, int anno)
       break;
    }
 }
+
+
+
 int bisestile (int anno)
 {
    return ((anno % 4 == 0) && (anno % 100 != 0)) || (anno % 400 == 0); 
 }
+
 
 
 void contagiorni(int g, int m, int a, int *contagiorni)
