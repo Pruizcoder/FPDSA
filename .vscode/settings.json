@@ -1,0 +1,8 @@
+{
+   "files.associations": {
+      "utility.h": "c",
+      "vett_lib.h": "c",
+      "stdlib.h": "c",
+      "stdio.h": "c"
+   }
+}
