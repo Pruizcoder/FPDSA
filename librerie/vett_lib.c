@@ -21,6 +21,7 @@ int leggi_vettore (int v[], int dim_max)
    // leggi gli elementi
    for (i = 0; i < dim; i++)
    {
+
       printf ("inserisci l'elemento di indice %d: ", i);
       // printf ("v[%d] = ", i);
       scanf ("%d", &v[i]);
@@ -47,7 +48,7 @@ void inverti_vettore (int v[], int dim)
 {
    for (int i = 0; i < dim; i++)
    {
-      for (int j = dim; j > 0; j++)
+      for (int j = dim; j > 0; j--)
       {
          swap(&v[i],&v[j]);
       }
@@ -58,8 +59,50 @@ void inverti_vettore (int v[], int dim)
 
 void inizializza_vettore (int v[], int dim, int valore_iniziale)
 {
-for (int i = 0; i < dim; i++)
+for (int i = 0; i < dim-1; i++)
 {
    v[i]= valore_iniziale;
 }
+}
+
+
+void stampa_isto_vert(int v[], int dim, int val_min, int val_max)
+{
+   int max = trova_max(v, dim);
+   for (int livello = max; livello > 0; livello--)
+    {
+        for (int i = 0; i < dim; i++)
+        {
+            if (v[i] >= livello)
+            {
+                printf(" * "); 
+            }
+            else
+            {
+                printf("   ");
+            }
+        }
+        printf("\n"); 
+    }
+   
+   for (int i = val_min; i < val_max+1; i++)
+      {
+         printf("%2d ", i);
+      }
+      printf("\n");
+}
+
+int trova_max(int v[], int dim)
+{
+   int max = v[0]; 
+   for (int i = 0; i < dim; i++)
+   {
+      if (max < v[i])
+      {
+         max = v[i];
+      }
+      
+   }
+   
+   return max;
 }

@@ -4,8 +4,7 @@
 #include "/home/pruiz/uni/esercizi/FPDSA/FPDSA/librerie/utility.h"
 
 /* dichiarazione delle f.ni prototipo */
-int leggi_vettore (int v[], int dim_max);
-void stampa_vettore (int v[], int dim);
+void assegna_valore (int v[], int contatori[], int dim);
 
 /* dichiarazione delle costanti */
 #define MAXARR 100 // massimo numero nell' array
@@ -20,10 +19,31 @@ int main()
    int dim = 0;
 
    inizializza_vettore(v,MAXARR,0);
-   inizializza_vettore(contatori,MAXARR,1);
+   inizializza_vettore(contatori, MAX - MIN + 2 ,0);
    dim = leggi_vettore(v, MAXARR);
-   stampa_vettore(contatori, MAX - MIN +1);
-
+   assegna_valore(v, contatori, dim);
+  // stampa_vettore(contatori, MAX - MIN + 1);
+   stampa_isto_vert(contatori,dim, MIN, MAX);
    return EXIT_SUCCESS;
 
 }
+
+void assegna_valore (int v[], int contatori[], int dim)
+{
+   for (int i = 0; i < dim; i++)
+   {
+      if (!(v[i]< MIN || v[i]> MAX))
+      {
+      contatori[v[i]]++;
+      }
+      else
+      {
+         printf(" il valore inseritonella cella %d non e' valido\n", i);
+      }
+            
+      
+   }
+   
+   
+}
+
