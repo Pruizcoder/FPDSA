@@ -10,6 +10,6 @@ void stampa_istogramma_orizzontale (int v[], int dim);
 void disegna_linea (int lunghezza);
 void stampa_isto_vert(int v[], int dim, int val_min, int val_max);
 int trova_max(int v[], int dim);
-
+int ricerca_lineare(int v[], int dim, int val_max, int val_min);
 
 #endif 

@@ -106,3 +106,20 @@ int trova_max(int v[], int dim)
    
    return max;
 }
+
+int ricerca_lineare(int v[], int dim, int val_max, int val_min, int val)
+{
+   for (int i = 0; i < dim; i++)
+   {
+      if (!(i< val_min || i > val_max))
+      {
+         if (val)
+         {
+            /* code */
+         }
+         
+      }
+      
+   }
+   
+}
