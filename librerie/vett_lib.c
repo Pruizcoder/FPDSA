@@ -107,24 +107,29 @@ int trova_max(int v[], int dim)
    return max;
 }
 
-void ricerca_lineare(int v[], int dim, int val_max, int val_min, int val)
+int ricerca_lineare(int v[], int dim, int val)
 {
-   int subdim = val_max - val_min;
-   int subv[subdim];
-   inizializza_vettore(subv,subdim, 0);
+for (int i = 0; i < dim; i++)
+{
+   //printf("v[%d]= %d\n", i, v[i]);
+   if (val == v[i])
+   {
 
-
+      return i;
+   }
+}
+return -1;
 }
 
 void crea_sottovettore(int v[], int subv[],int subdim, int val_max, int val_min)
 {  
-   for (int i = val_min; i < val_max; i++)
+   int j=0;
+   for (int i = val_min; i < val_max+1; i++)
    {
-      for (int  j = 0; j < subdim; j++)
-      {
-         v[j]= v[i];
-      }
-      
+
+      //printf("%d\n", i);
+      subv[j]= v[i];
+      j++;   
    }
    
 }
