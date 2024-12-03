@@ -12,5 +12,8 @@ void stampa_isto_vert(int v[], int dim, int val_min, int val_max);
 int trova_max(int v[], int dim);
 int ricerca_lineare(int v[], int dim, int val);
 void crea_sottovettore(int v[], int subv[],int subdim, int val_max, int val_min);
-
+void scorrimento_lineare(int v[], int dim);
+void selection_sort_desc(int array[], int n);
+void bubblesort_cres(int v[], int n);
+void bubblesort_decr(int v[], int n);
 #endif 

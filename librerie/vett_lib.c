@@ -133,3 +133,55 @@ void crea_sottovettore(int v[], int subv[],int subdim, int val_max, int val_min)
    }
    
 }
+
+
+void scorrimento_lineare(int v[], int dim)
+{
+   for (int i = dim; i >= 0; i--)
+   {
+      v[i]= v[i-1];
+   }
+   
+}
+
+void selection_sort_desc(int array[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        int max_idx = i; 
+        for (int j = i + 1; j < n; j++) {
+            if (array[j] > array[max_idx]) {
+                max_idx = j; 
+            }
+        }
+        if (max_idx != i) {
+            int temp = array[i];
+            array[i] = array[max_idx];
+            array[max_idx] = temp;
+        }
+    }
+}
+void bubblesort_cres(int v[], int n) {
+int i,k;
+int temp;
+for(i = 0; i<n-1; i++) {
+ for(k = 0; k<n-1-i; k++) {
+         if(v[k] > v[k+1]) {
+          temp = v[k];
+          v[k] = v[k+1];
+          v[k+1] = temp;
+         }
+ }
+}
+}
+void bubblesort_decr(int v[], int n) {
+int i,k;
+int temp;
+for(i = 0; i<n-1; i++) {
+ for(k = 0; k<n-1-i; k++) {
+         if(v[k] < v[k+1]) {
+          temp = v[k];
+          v[k] = v[k+1];
+          v[k+1] = temp;
+         }
+ }
+}
+}
