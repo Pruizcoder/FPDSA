@@ -31,8 +31,8 @@ inizializza_matrice(campo);
 while (fgets(input, MAX_INPUT, stdin) != NULL)
 {
 piazza_navi(campo, input);
+
 }
-//fgets(input, MAX_INPUT, stdin);
 stampa_martice(campo);
 
 }
@@ -45,13 +45,13 @@ void piazza_navi(char campo[ALTEZZA][LARGHEZZA], char input[])
         int i = 0;
         //leggi nave
         char nave_string[MAX_NAVE];
-        int nave_int= 0;
         while (input[i] != ' ')
         {
             nave_string[i] = input[i];
             i++;
         }
         nave_string[i] = '\0';
+        int nave_int= 0;
         nave_int = converti_navi(nave_string);
         //salta spazio
         i++;
@@ -157,7 +157,7 @@ int converti_navi(char *nave)
     }
     else if (strcmp(nave, "incrociatore"))
     {
-        return INC;
+        return 3;
     }
     else if (strcmp(nave, "ricognitore"))
     {
@@ -177,6 +177,7 @@ void piazza_verticale(int x, int y, char campo[ALTEZZA][LARGHEZZA],int dimension
 {
     for (int i = y; i < y + dimensione + 1; i++)
     {
+
         campo[i][x] = '*';
     }
     
@@ -188,7 +189,13 @@ void piazza_orizzontale(int x, int y, char campo[ALTEZZA][LARGHEZZA],int dimensi
 {
     for (int i = x; i < x + dimensione + 1; i++)
     {
-        campo[y][i] = '*';
+        if (campo[y][i] == '*')
+        {
+            
+            printf("errore di caricamento della nave :");
+        }
+        
+        
     }
     
 }
