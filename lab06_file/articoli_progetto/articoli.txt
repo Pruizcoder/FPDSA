@@ -1,0 +1,16 @@
+"barra in alluminio da 3" 50
+"barra in alluminio da 4" 52
+"barra in alluminio da 5" 54
+"barra in alluminio da 6" 56
+"barra in alluminio da 7" 58
+"barra in acciaio da 1" 20
+"barra in acciaio da 2" 30
+"barra in acciaio da 3" 40
+"barra in acciaio da 4" 50
+"barra in acciaio da 5" 60
+"barra in acciaio da 6" 70
+"barra in acciaio da 7" 80
+"tubo in bronzo da 12" 1
+"tubo in bronzo da 13" 5
+"tubo in bronzo da 14" 7
+"tubo in bronzo da 15" 11

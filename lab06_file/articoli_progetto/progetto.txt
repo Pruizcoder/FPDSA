@@ -1,0 +1,14 @@
+"chiodo da 2" 100
+"dado esagonale da 6" 12
+"vite da 6" 12
+"barra in acciaio da 2" 3
+"barra in alluminio da 5" 100
+"barra in alluminio da 19" 60
+"tubo in bronzo da 12" 9
+"barra in alluminio da 7" 58
+"tubo in bronzo da 14" 7
+"tubo in bronzo da 21" 23
+"tubo in bronzo da 15" 11
+"barra in alluminio da 6" 56
+"barra in acciaio da 1" 34
+"tubo in bronzo da 13" 8
