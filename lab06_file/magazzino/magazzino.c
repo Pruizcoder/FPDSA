@@ -1,55 +1,61 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define MAX_ARTICOLO 100
 #define MAX_FILENAME 32
+#define MAX_NOME 64  
 
-
-
-struct articolo
-{
-   char nome[32];
-   int q;
+struct articolo {
+    char nome[MAX_NOME];
+    int q;
 };
 
-void leggi_file(FILE *fi, struct articolo articoli[]);
+void leggi_file(FILE *fi, struct articolo articoli[], int *n_articoli);
+void stampa_articoli(struct articolo articoli[], int n_articoli);
 
+int main() {
+    FILE *file_input;
+    char file_name[MAX_FILENAME];
+    struct articolo articoli[MAX_ARTICOLO];
+    int n_articoli = 0;
 
-int main()
-{
-   FILE *file_input;
-   char file_name[MAX_FILENAME];
-   struct articolo articoli[MAX_ARTICOLO];
+    printf("inserisci il nome del file magazzino:\n");
+    scanf("%s", file_name);
 
-   printf("inserisci il nome del file:\n");
-   scanf("%s", &file_name);
-   if ((file_input = fopen(file_name, "r") )== NULL)
-   {
-     
-      printf("errore nell' apertura del file %s\n", file_name);
-      exit(EXIT_FAILURE);
-   }
+    file_input = fopen(file_name, "r");
+    if (file_input == NULL) {
+        printf("errore nell'apertura del file %s\n", file_name);
+        exit(EXIT_FAILURE);
+    }
 
-   leggi_file(file_input, articoli);
+    leggi_file(file_input, articoli, &n_articoli);
 
-   printf("%s", articoli[0].nome);
-   
+    fclose(file_input);
 
-   return EXIT_SUCCESS;
+    stampa_articoli(articoli, n_articoli);
+
+    return EXIT_SUCCESS;
 }
 
+void leggi_file(FILE *fi, struct articolo articoli[], int *n_articoli) {
+    char buffer[MAX_NOME + 32];
+    char nome[MAX_NOME];
+    int q;
 
-void leggi_file(FILE *fi, struct articolo articoli[])
-{
-   int i = 0;
-   int j = 0;
-   while (fgetc(fi)!= '\n')
-   {
-   
-      while (fgetc(fi)!= '"');
-      {
-         articoli[i].nome[j] = fgetc((fi));
-      }
-   }
-   
+    while (fgets(buffer, sizeof(buffer), fi) != NULL) {
+        if (sscanf(buffer, " \"%[^\"]\" %d", nome, &q) == 2) {
+            strncpy(articoli[*n_articoli].nome, nome, MAX_NOME);
+            articoli[*n_articoli].nome[MAX_NOME - 1] = '\0'; 
+            articoli[*n_articoli].q = q;
+
+            (*n_articoli)++;
+        }
+    }
+}
+
+void stampa_articoli(struct articolo articoli[], int n_articoli) {
+    for (int i = 0; i < n_articoli; i++) {
+        printf("\"%s\" : %d\n", articoli[i].nome, articoli[i].q);
+    }
 }
