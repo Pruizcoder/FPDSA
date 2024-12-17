@@ -15,6 +15,8 @@ struct scatola
 
 
 void leggi_file(FILE *fi, struct scatola scatole[]);
+void bubbleSortDesc(struct scatola scatole[], int n);
+void piazza_scatole(struct scatola scatole[], int n);
 
 
 int main()
@@ -22,7 +24,6 @@ int main()
    FILE *file_input;
    char file_name[MAX_FILE_NAME];
    struct scatola scatole[MAX_SCATOLE];
-   
    printf("inserisci il nome del file:");
    scanf("%s", file_name);
 
@@ -32,11 +33,60 @@ int main()
       printf("errore nell'apertura del file %s", file_name);
       exit(EXIT_FAILURE);
    }
-   
+   leggi_file(file_input, scatole);
+   int dimarr = sizeof(scatole) / sizeof(scatole[0]);
+   bubbleSortDesc(scatole, dimarr);
+   piazza_scatole(scatole, dimarr);
+
+
    return EXIT_SUCCESS;
  }
 
 void leggi_file(FILE *fi, struct scatola scatole[])
 {
+   char buffer[16];
+   while (fgets(buffer, sizeof(buffer), fi))
+   {
+      sscanf(buffer, "%s %f", scatole->id, &scatole->dim);
+   }
+   
+}
+
+
+void bubbleSortDesc(struct scatola scatole[], int n)
+{
+   int i, j;
+   struct scatola temp;
+   
+   for (i = 0; i < n-1; i++) {
+      for (j = 0; j < n-i-1; j++) {
+         if (scatole[j].dim < scatole[j+1].dim) {
+            temp = scatole[j];
+            scatole[j] = scatole[j+1];
+            scatole[j+1] = temp;
+         }
+      }
+   }
+}
+
+void piazza_scatole(struct scatola scatole[], int n)
+{
+   int i = 0;
+   float spazio_rimanente = 1.5;
+   while (scatole[i].caricata == false)
+   {
+      if (spazio_rimanente < scatole[i].dim)
+      {
+         printf("\n%d:", i+1);
+      }
+      else
+      {
+         spazio_rimanente = spazio_rimanente + scatole[i].dim;
+         printf("%s/", scatole[i].id);
+         scatole[i].caricata = true;
+      }
+      i++;
+      
+   }
    
 }
