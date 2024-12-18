@@ -80,6 +80,7 @@ void piazza_scatole(struct scatola scatole[], int n)
       if (spazio_rimanente < scatole[i].dim)
       {
          printf("\n%d:", i+1);
+         i = 0;
       }
       else
       {
