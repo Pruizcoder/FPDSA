@@ -37,7 +37,7 @@ int main()
    int dimarr = sizeof(scatole) / sizeof(scatole[0]);
    bubbleSortDesc(scatole, dimarr);
    piazza_scatole(scatole, dimarr);
-
+   
 
    return EXIT_SUCCESS;
  }
@@ -45,9 +45,11 @@ int main()
 void leggi_file(FILE *fi, struct scatola scatole[])
 {
    char buffer[16];
+   int i= 0;
    while (fgets(buffer, sizeof(buffer), fi))
    {
-      sscanf(buffer, "%s %f", scatole->id, &scatole->dim);
+      sscanf(buffer, "%s %f", scatole[i].id, &scatole[i].dim);
+      i++;
    }
    
 }
@@ -82,7 +84,7 @@ void piazza_scatole(struct scatola scatole[], int n)
       else
       {
          spazio_rimanente = spazio_rimanente + scatole[i].dim;
-         printf("%s/", scatole[i].id);
+         printf("%s/", scatole[i].id); 
          scatole[i].caricata = true;
       }
       i++;
@@ -90,3 +92,4 @@ void piazza_scatole(struct scatola scatole[], int n)
    }
    
 }
+
