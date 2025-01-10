@@ -36,7 +36,7 @@ int leggi_file_offerte(FILE* fp,struct offerta offerte[])
    int i = 0;
    while (fscanf(fp,"%s %s %d", offerte[i].id,offerte[i].nome,&offerte[i].valore ) != EOF)
    {
-      i++;
+      i++;cate
    }
    return i;
 }
@@ -57,7 +57,7 @@ void trova_vincente(struct articolo articoli[], struct offerta offerte[], int di
          }
          
       }
-      printf("%s ha vinto l'asta n. %s di %s con un' offerta di %d", vincente,articoli[i].id, articoli[i].descrizione, articoli[i].prezzo);        
+      printf("%s ha vinto l'asta n. %s di %s con un' offerta di %d\n", vincente,articoli[i].id, articoli[i].descrizione, articoli[i].prezzo);        
       i++;
    }
    
@@ -79,8 +79,15 @@ int main (int argc, char *argv[])
       exit(EXIT_FAILURE);
    }
    
-   leggi_file_articoli(file_articoli, articoli);
-   leggi_file_offerte(file_offerte, offerte);
+    dimarticoli = leggi_file_articoli(file_articoli, articoli);
+for (int i = 0; i < dimarticoli; i++)
+{
+   printf("%s| %s: %d\n", articoli->id, articoli->descrizione, articoli->prezzo);
+}
+
+   
+
+   dimofferte = leggi_file_offerte(file_offerte, offerte);
    fclose(file_articoli);
    fclose(file_offerte);
 
