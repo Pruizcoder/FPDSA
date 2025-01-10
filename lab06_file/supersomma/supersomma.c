@@ -3,7 +3,7 @@
 #include<string.h>
 
 #define MAX_FILENAME 32
-#define MAX_N 1024
+#define MAX_N 2048
 
 void supersomma (char a[], char b[], char c[]);
 void leggi_file(FILE *fi);
