@@ -16,7 +16,6 @@ int leggi_file(FILE *fp, struct scatola scatole[MAX_N_BOX]);
 void ordina_carrelli(struct scatola scatole[MAX_N_BOX], int n_scatole);
 int cerca_scatola(struct scatola scatole[MAX_N_BOX], int n_scatole, double lunghezza_rimasta);
 
-
 int main(int argc, char *argv[])
 {
    if (argc != 2)
@@ -38,7 +37,6 @@ int main(int argc, char *argv[])
    int n_scatole;
 
    n_scatole = leggi_file(fp, scatole);
-
 
    ordina_carrelli(scatole, n_scatole);
 
@@ -88,30 +86,30 @@ void ordina_carrelli(struct scatola scatole[MAX_N_BOX], int n_scatole)
 
 int cerca_scatola(struct scatola scatole[MAX_N_BOX], int n_scatole, double lunghezza_rimasta)
 {
-    int i, indice_max = -1;
-    double max_length = 0.0;
+   int i, indice_max = -1;
+   double max_length = 0.0;
 
-    for (i = 0; i < n_scatole; i++)
-    {
-        if (!scatole[i].utilizzata && scatole[i].l <= lunghezza_rimasta && scatole[i].l > max_length)
-        {
-            max_length = scatole[i].l;
+   for (i = 0; i < n_scatole; i++)
+   {
+      if (!scatole[i].utilizzata && scatole[i].l <= lunghezza_rimasta && scatole[i].l > max_length)
+      {
+         max_length = scatole[i].l;
+         indice_max = i;
+      }
+   }
+
+   // Se non è stata trovata nessuna scatola, cerca una scatola di lunghezza 0
+   if (indice_max == -1)
+   {
+      for (i = 0; i < n_scatole; i++)
+      {
+         if (!scatole[i].utilizzata && scatole[i].l == 0)
+         {
             indice_max = i;
-        }
-    }
+            break;
+         }
+      }
+   }
 
-    // Se non è stata trovata nessuna scatola, cerca una scatola di lunghezza 0
-    if (indice_max == -1)
-    {
-        for (i = 0; i < n_scatole; i++)
-        {
-            if (!scatole[i].utilizzata && scatole[i].l == 0)
-            {
-                indice_max = i;
-                break;
-            }
-        }
-    }
-
-    return indice_max;
+   return indice_max;
 }
