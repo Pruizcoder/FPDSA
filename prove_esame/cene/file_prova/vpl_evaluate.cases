@@ -1,0 +1,70 @@
+case=test00
+program arguments=date_00.txt disponibilita_00.txt
+output=28/12/2024 a pranzo: 5 persone
+case=test01
+program arguments=date_01.txt disponibilita_01.txt
+output=6/12/2024 a pranzo: 5 persone
+case=test02
+program arguments=date_02.txt disponibilita_02.txt
+output=21/1/2025 a cena: 3 persone
+20/1/2025 a cena: 3 persone
+case=test03
+program arguments=date_03.txt disponibilita_03.txt
+output=2/1/2025 a pranzo: 4 persone
+case=test04
+program arguments=date_04.txt disponibilita_04.txt
+output=23/1/2025 a cena: 4 persone
+12/1/2025 a pranzo: 4 persone
+case=test05
+program arguments=date_05.txt disponibilita_05.txt
+output=6/12/2024 a cena: 6 persone
+24/12/2024 a pranzo: 6 persone
+case=test06
+program arguments=date_06.txt disponibilita_06.txt
+output=22/1/2025 a cena: 8 persone
+case=test07
+program arguments=date_07.txt disponibilita_07.txt
+output=14/1/2025 a pranzo: 4 persone
+26/12/2024 a pranzo: 4 persone
+case=test08
+program arguments=date_08.txt disponibilita_08.txt
+output=9/12/2024 a pranzo: 2 persone
+7/1/2025 a pranzo: 2 persone
+20/1/2025 a pranzo: 2 persone
+1/12/2024 a pranzo: 2 persone
+case=test09
+program arguments=date_09.txt disponibilita_09.txt
+output=18/1/2025 a pranzo: 5 persone
+13/12/2024 a pranzo: 5 persone
+case=test10
+program arguments=date_10.txt disponibilita_10.txt
+output=30/12/2024 a pranzo: 6 persone
+case=test11
+program arguments=date_11.txt disponibilita_11.txt
+output=4/1/2025 a pranzo: 5 persone
+case=test12
+program arguments=date_12.txt disponibilita_12.txt
+output=2/12/2024 a cena: 7 persone
+8/1/2025 a pranzo: 7 persone
+case=test13
+program arguments=date_13.txt disponibilita_13.txt
+output=29/1/2025 a cena: 5 persone
+case=test14
+program arguments=date_14.txt disponibilita_14.txt
+output=15/12/2024 a pranzo: 3 persone
+case=test15
+program arguments=date_15.txt disponibilita_15.txt
+output=8/12/2024 a pranzo: 6 persone
+case=test16
+program arguments=date_16.txt disponibilita_16.txt
+output=6/1/2025 a pranzo: 3 persone
+case=test17
+program arguments=date_17.txt disponibilita_17.txt
+output=3/1/2025 a pranzo: 6 persone
+2/1/2025 a cena: 6 persone
+case=test18
+program arguments=date_18.txt disponibilita_18.txt
+output=1/12/2024 a pranzo: 8 persone
+case=test19
+program arguments=date_19.txt disponibilita_19.txt
+output=26/12/2024 a pranzo: 5 persone

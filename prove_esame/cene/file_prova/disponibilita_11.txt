@@ -1,0 +1,54 @@
+Tina, Cipolla: 18/12/2024 pranzo
+Antonina Carla, Papetti: 05/12/2024 cena
+Marina Zaira, Pacomio: 24/01/2025 cena
+Giuseppe, Respighi: 04/01/2025 pranzo
+Annalisa, Anguissola: 02/12/2024 cena
+Cassandra Lidia, Bignardi: 06/01/2025 pranzo
+Pellegrino, Riccati: 16/12/2024 pranzo
+Pierluigi Luchino, Ferrata Ferrazzi: 05/12/2024 cena
+Tina, Cipolla: 04/01/2025 pranzo
+Pierluigi Luchino, Ferrata Ferrazzi: 04/01/2025 pranzo
+Stella Susanna, Ziani: 22/01/2025 cena
+Antonina Carla, Papetti: 02/12/2024 cena
+Annalisa, Anguissola: 05/12/2024 cena
+Giuseppe, Respighi: 27/12/2024 pranzo
+Pierluigi Luchino, Ferrata Ferrazzi: 04/12/2024 cena
+Tina, Cipolla: 06/01/2025 cena
+Antonina Carla, Papetti: 18/01/2025 cena
+Carolina, Campanella: 26/01/2025 cena
+Pierluigi Luchino, Ferrata Ferrazzi: 28/01/2025 pranzo
+Antonina Carla, Papetti: 06/01/2025 cena
+Allegra, Giannetti: 27/12/2024 pranzo
+Raffaella, Pace: 14/01/2025 pranzo
+Augusto, Scarlatti: 16/12/2024 pranzo
+Pellegrino, Riccati: 31/12/2024 cena
+Cassandra Lidia, Bignardi: 07/12/2024 pranzo
+Augusto, Scarlatti: 02/12/2024 pranzo
+Raffaella, Pace: 04/12/2024 cena
+Tina, Cipolla: 24/01/2025 cena
+Ottavio Giacobbe, Dulbecco: 20/12/2024 pranzo
+Gianmarco, Mattarella: 11/01/2025 cena
+Augusto, Scarlatti: 15/12/2024 cena
+Carolina, Campanella: 13/01/2025 pranzo
+Pellegrino, Riccati: 22/01/2025 cena
+Tina, Cipolla: 19/01/2025 cena
+Allegra, Giannetti: 20/12/2024 pranzo
+Antonina Carla, Papetti: 04/01/2025 pranzo
+Ottavio Giacobbe, Dulbecco: 02/12/2024 pranzo
+Pellegrino, Riccati: 06/01/2025 pranzo
+Pellegrino, Riccati: 07/12/2024 pranzo
+Cassandra Lidia, Bignardi: 14/01/2025 pranzo
+Augusto, Scarlatti: 24/01/2025 cena
+Pierluigi Luchino, Ferrata Ferrazzi: 24/01/2025 cena
+Gianmarco, Mattarella: 16/12/2024 pranzo
+Antonina Carla, Papetti: 20/12/2024 pranzo
+Antonina Carla, Papetti: 26/01/2025 cena
+Pierluigi Luchino, Ferrata Ferrazzi: 22/01/2025 cena
+Carolina, Campanella: 04/01/2025 pranzo
+Ottavio Giacobbe, Dulbecco: 06/01/2025 cena
+Gianmarco, Mattarella: 26/01/2025 cena
+Marina Zaira, Pacomio: 06/01/2025 pranzo
+Marina Zaira, Pacomio: 05/12/2024 cena
+Carolina, Campanella: 15/12/2024 cena
+Allegra, Giannetti: 30/11/2024 pranzo
+Carolina, Campanella: 28/01/2025 pranzo
