@@ -35,19 +35,19 @@ int main(int argc, char *argv[])
    FILE *fp_disponibilita;
    FILE *fp_presenze;
    // controlla argc
-   /*if (argc != 3)
+   if (argc != 3)
    {
        printf("errore, manca un file ");
        exit(EXIT_FAILURE);
-   }*/
+   }
    // apri i file
-   if ((fp_disponibilita = fopen(/*argv[1]*/ "date_00.txt", "r")) == NULL)
+   if ((fp_disponibilita = fopen(argv[1]/*"date_00.txt"*/, "r")) == NULL)
    {
       printf("errore di apertura del file");
       exit(EXIT_FAILURE);
    }
 
-   if ((fp_presenze = fopen(/*argv[2]*/ "disponibilita_00.txt", "r")) == NULL)
+   if ((fp_presenze = fopen(argv[2]/* "disponibilita_00.txt"*/, "r")) == NULL)
    {
       printf("errore di apertura del file ");
       exit(EXIT_FAILURE);
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
    int nDateDisponibili = caricaDate(DateDisponibili, fp_disponibilita, MAX_DATE); // per soddisfare il punto I
 
    leggi_file_presenze(fp_presenze, DateDisponibili, nDateDisponibili);
-   // stampa_presenze(DateDisponibili, nDateDisponibili); //stampa il file delle date, per verificarne la lettura corretta
+   stampa_presenze(DateDisponibili, nDateDisponibili); // stampa il file delle date, per verificarne la lettura corretta
    // chiudi i file
    fclose(fp_disponibilita);
    fclose(fp_presenze);
@@ -85,25 +85,21 @@ void leggi_file_presenze(FILE *fp_presenze, struct proposta DateDisponibili[], i
    */
    char s[MAX_STRING_DIM];
 
-   int i = 0;
+
    while (fgets(s, MAX_STRING_DIM, fp_presenze) != NULL)
    {
       // printf("%s\n",s);
       struct proposta presenza;
 
       presenza = estrai_dati(s);
-      printf("giorno:%d, mese:%d, anno:%d, quando:%s\n", presenza.data.giorno, presenza.data.mese, presenza.data.anno, presenza.quando);
 
-      /*for (int j = 0;j < nDateDisponibili; j++)
+      for (int j = 0; j < nDateDisponibili; j++)
       {
-       int indice =  cerca_data( DateDisponibili, presenza, i);
-       if (indice != -1)
-       {
-          DateDisponibili[indice].n_persone++;
-       }
-      }*/
-
-      i++;
+         if (DateDisponibili[j].data.giorno == presenza.data.giorno && DateDisponibili[j].data.mese == presenza.data.mese && DateDisponibili[j].data.anno == presenza.data.anno && strcmp(DateDisponibili[j].quando, presenza.quando) == 0)
+         {
+            DateDisponibili[j].n_persone++;
+         }
+      }
    }
 }
 
@@ -123,7 +119,6 @@ struct proposta estrai_dati(char s[])
               // estrai il giorno
    while (s[i] != '/')
    {
-      printf("\ncarattere:%c\n", s[i]);
       t[j] = s[i];
       j++;
       i++;
@@ -134,11 +129,12 @@ struct proposta estrai_dati(char s[])
    j = 0;
    i++;
 
-   while ((s[i] < '0') || (s[i] > '9'))
+   while (s[i] != '/')
    // estrai il mese
    {
       t[j] = s[i];
       j++;
+      i++;
    }
    t[j] = '\0';
    art.data.mese = atoi(t);
@@ -146,7 +142,7 @@ struct proposta estrai_dati(char s[])
    i++; // mi posiziono dopo /
 
    // estrai anno
-   while ((s[i] < '0') || (s[i] > '9'))
+   while (s[i] != ' ')
    {
       t[j] = s[i];
       j++;
@@ -157,25 +153,14 @@ struct proposta estrai_dati(char s[])
    j = 0;
    i++;
    // estrai quando
-   for (; s[i] != '\n'; i++)
+   while ((s[i] != '\n'))
    {
       art.quando[j] = s[i];
       j++;
       i++;
    }
-   j++;
    art.quando[j] = '\0';
    return art;
-}
-
-int cerca_data(struct proposta DateDisponibili[], struct proposta presenze, int nDateDisponibili)
-{
-   for (int i = 0; i < nDateDisponibili; i++)
-   {
-      if (DateDisponibili[i].data.giorno == presenze.data.giorno && DateDisponibili[i].data.mese == presenze.data.mese && DateDisponibili[i].data.anno == presenze.data.anno && !(strcmp(DateDisponibili[i].quando, presenze.quando)) == 0)
-         return i;
-   }
-   return -1; // Pasto e data non trovati
 }
 
 void stampa_presenze(struct proposta ev[], int max_ev)
