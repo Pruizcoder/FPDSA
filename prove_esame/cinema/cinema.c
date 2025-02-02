@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define DIM_ID 80 // dimensione del vettore ID
+#define DIM_ID 128 // dimensione del vettore ID
 #define DIM_BUFFER 256 // dimesionde per il buffer delle stringhe
-#define DIM_NOME 64 // dimensione del vettore per i nomi degli spettacoli
+#define DIM_NOME 128 // dimensione del vettore per i nomi degli spettacoli
 
 struct orario
 {

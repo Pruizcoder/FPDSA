@@ -1,0 +1,80 @@
+F874 "Organic holistic time-frame" 9/1/2025 21:00 sala 3 posti 79
+F709 "Extended next generation service-desk" 14/1/2025 17:30 sala 5 posti 68
+F863 "Integrated tangible artificial intelligence" 10/1/2025 12:35 sala 3 posti 39
+F302 "Team-oriented real-time superstructure" 10/1/2025 23:55 sala 1 posti 24
+F848 "Universal 3rdgeneration leverage" 14/1/2025 15:45 sala 1 posti 50
+F231 "Cross-group eco-centric structure" 9/1/2025 10:45 sala 1 posti 77
+F632 "Optimized directional definition" 14/1/2025 20:00 sala 2 posti 25
+F431 "Pre-emptive systemic implementation" 12/1/2025 12:40 sala 2 posti 27
+F163 "Integrated multi-tasking middleware" 13/1/2025 13:15 sala 5 posti 60
+F611 "Realigned systemic architecture" 13/1/2025 21:50 sala 3 posti 50
+F329 "Persevering empowering complexity" 10/1/2025 19:40 sala 2 posti 72
+F327 "User-centric empowering matrix" 11/1/2025 9:40 sala 5 posti 42
+F661 "Synergistic user-facing extranet" 14/1/2025 15:40 sala 4 posti 26
+F372 "Progressive 6thgeneration adapter" 14/1/2025 19:30 sala 5 posti 60
+F733 "De-engineered bifurcated ability" 12/1/2025 15:10 sala 3 posti 68
+F208 "Horizontal reciprocal approach" 15/1/2025 17:35 sala 2 posti 48
+F327 "Visionary multi-tasking moderator" 15/1/2025 20:10 sala 4 posti 27
+F595 "Object-based web-enabled implementation" 12/1/2025 15:40 sala 5 posti 37
+F417 "Managed mission-critical system engine" 10/1/2025 13:15 sala 3 posti 30
+F964 "Profound solution-oriented toolset" 12/1/2025 22:25 sala 1 posti 88
+F761 "Realigned zero tolerance data-warehouse" 15/1/2025 12:00 sala 3 posti 68
+F709 "Face-to-face incremental toolset" 13/1/2025 18:00 sala 1 posti 44
+F843 "Re-contextualized mission-critical installation" 15/1/2025 18:55 sala 5 posti 47
+F510 "Vision-oriented foreground approach" 10/1/2025 22:25 sala 3 posti 21
+F236 "Cross-group non-volatile superstructure" 10/1/2025 20:05 sala 4 posti 51
+F732 "Front-line explicit archive" 13/1/2025 20:15 sala 4 posti 50
+F585 "Programmable explicit circuit" 11/1/2025 21:20 sala 4 posti 79
+F566 "Business-focused heuristic functionalities" 14/1/2025 14:20 sala 3 posti 66
+F545 "Synergized human-resource matrix" 12/1/2025 16:05 sala 4 posti 60
+F956 "Multi-channeled bifurcated help-desk" 10/1/2025 14:25 sala 4 posti 25
+F596 "Enterprise-wide bandwidth-monitored success" 15/1/2025 12:55 sala 2 posti 22
+F287 "Re-engineered dynamic hierarchy" 13/1/2025 23:45 sala 5 posti 73
+F322 "Enhanced secondary capacity" 10/1/2025 12:25 sala 2 posti 68
+F603 "Synergized coherent model" 15/1/2025 12:35 sala 5 posti 63
+F283 "Open-architected client-server circuit" 15/1/2025 22:35 sala 4 posti 78
+F192 "Automated incremental methodology" 14/1/2025 21:25 sala 2 posti 37
+F757 "Function-based 6thgeneration collaboration" 13/1/2025 16:10 sala 5 posti 27
+F556 "Total high-level matrices" 9/1/2025 22:05 sala 1 posti 20
+F442 "Pre-emptive object-oriented success" 10/1/2025 22:50 sala 2 posti 28
+F744 "Extended static structure" 10/1/2025 9:15 sala 5 posti 78
+F402 "Optimized eco-centric circuit" 9/1/2025 18:50 sala 5 posti 81
+F695 "Implemented multimedia approach" 12/1/2025 9:00 sala 5 posti 90
+F441 "Business-focused non-volatile intranet" 9/1/2025 9:40 sala 3 posti 88
+F313 "Robust transitional support" 9/1/2025 17:55 sala 4 posti 42
+F129 "Vision-oriented 4thgeneration knowledge user" 9/1/2025 17:10 sala 2 posti 44
+F654 "Self-enabling uniform encoding" 13/1/2025 13:25 sala 3 posti 70
+F100 "Managed motivating attitude" 11/1/2025 15:35 sala 5 posti 51
+F733 "Horizontal optimizing service-desk" 10/1/2025 13:50 sala 1 posti 24
+F115 "Streamlined dynamic software" 12/1/2025 15:30 sala 5 posti 80
+F77 "Multi-lateral tertiary structure" 14/1/2025 9:55 sala 2 posti 30
+F531 "Stand-alone neutral architecture" 15/1/2025 15:50 sala 3 posti 92
+F898 "Right-sized grid-enabled complexity" 9/1/2025 23:40 sala 1 posti 49
+F236 "Mandatory didactic collaboration" 15/1/2025 20:45 sala 4 posti 54
+F67 "Customer-focused reciprocal customer loyalty" 9/1/2025 19:20 sala 5 posti 92
+F693 "Networked zero administration orchestration" 9/1/2025 11:25 sala 1 posti 46
+F621 "Sharable static Graphical User Interface" 10/1/2025 21:55 sala 4 posti 29
+F326 "Ergonomic empowering approach" 10/1/2025 18:15 sala 5 posti 69
+F713 "Robust content-based flexibility" 13/1/2025 14:30 sala 2 posti 30
+F532 "Customizable eco-centric capability" 14/1/2025 14:00 sala 1 posti 75
+F257 "Automated grid-enabled artificial intelligence" 15/1/2025 10:25 sala 5 posti 98
+F997 "Distributed solution-oriented encoding" 13/1/2025 15:25 sala 1 posti 54
+F822 "Persistent multi-state firmware" 12/1/2025 16:15 sala 3 posti 90
+F983 "Down-sized tangible portal" 12/1/2025 15:10 sala 5 posti 68
+F107 "Future-proofed modular archive" 15/1/2025 18:20 sala 2 posti 29
+F104 "Total real-time open architecture" 11/1/2025 11:30 sala 2 posti 69
+F344 "Cross-group bi-directional benchmark" 11/1/2025 10:05 sala 1 posti 59
+F475 "Managed full-range attitude" 11/1/2025 21:20 sala 1 posti 36
+F109 "Function-based logistical frame" 10/1/2025 15:35 sala 5 posti 91
+F544 "Decentralized encompassing database" 12/1/2025 10:00 sala 1 posti 65
+F587 "De-engineered web-enabled software" 9/1/2025 18:45 sala 3 posti 69
+F32 "Innovative neutral hub" 11/1/2025 15:30 sala 1 posti 91
+F946 "Open-architected responsive collaboration" 10/1/2025 18:40 sala 2 posti 68
+F193 "Fundamental scalable access" 10/1/2025 13:20 sala 3 posti 83
+F169 "Customizable local array" 9/1/2025 11:30 sala 3 posti 73
+F326 "Centralized logistical Graphical User Interface" 12/1/2025 21:05 sala 3 posti 52
+F986 "Horizontal empowering Local Area Network" 10/1/2025 20:50 sala 4 posti 96
+F651 "Triple-buffered transitional interface" 10/1/2025 16:05 sala 2 posti 58
+F26 "Implemented full-range utilization" 12/1/2025 14:45 sala 4 posti 62
+F470 "Intuitive user-facing superstructure" 11/1/2025 15:50 sala 5 posti 37
+F327 "Multi-layered intangible secured line" 11/1/2025 18:55 sala 2 posti 81
