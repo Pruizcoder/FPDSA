@@ -64,17 +64,6 @@ int LeggiDati(char* file_name, struct evento ev[]){
       printf("errore nell'apertura del file %s\n", file_name);
       exit(EXIT_FAILURE); // segnalo l'errore di apertura e termino il programma
    }
-   char buffer[DIM_BUFFER]; //buffer di lettura
-   int j; //variabile di conteggio delle righe
-   j = 0;
-   while (fgets(buffer, DIM_BUFFER, fp) != NULL)
-   {
-      int i;
-      i = 0;
-      int k;
-      k = 0;
-      while (buffer[i] != ' ') // fino allo spazio copia i caratteri nell' ID
-      {
       ev[j].id[k] = buffer[i];
       i++;
       k++;
@@ -104,7 +93,7 @@ int LeggiDati(char* file_name, struct evento ev[]){
       } //salvo il resto della string in un altra string da processare
 
       buffer2[k] = '\0';
-sscanf(buffer2, " %u/%u/%u %u:%u sala %u posti %u",
+sscanf(buffer2, " %d/%d/%d %d:%d sala %d posti %d",
        &ev[j].data.giorno,
        &ev[j].data.mese,
        &ev[j].data.anno,
