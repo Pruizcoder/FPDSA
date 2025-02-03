@@ -1,27 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 #define DIM_ID 128 // dimensione del vettore ID
 #define DIM_BUFFER 256 // dimesionde per il buffer delle stringhe
 #define DIM_NOME 128 // dimensione del vettore per i nomi degli spettacoli
 
+
+
 struct orario
 {
-   int ora;
-   int minuti;
+    int ora;
+    int minuti;
 };
 
 struct data
 {
-   int giorno;
-   int mese;
-   int anno;
+    int giorno;
+    int mese;
+    int anno;
 };
 
 struct sala
 {
-   int sala;
-   int posti;
+    int sala;
+    int posti;
 };
 
 struct evento
@@ -40,11 +42,16 @@ void stampaProiezioni(struct evento proiezioni[], int n_proi);
 
 int main(int argc, char* argv[])
 {
+   
+#ifdef DEBUG
+printf("programma compilato in modalita debug\n");
+#endif
+   /*
    if (argc != 3)
    {
       printf("errore, manca un file\n ");
       exit(EXIT_FAILURE);
-   }
+   }*/
    struct evento proiezioni[200];
    struct evento prenotazioni[1000];
    int n_proi = LeggiDati(argv[1], proiezioni);
@@ -112,6 +119,14 @@ sscanf(buffer2, " %d/%d/%d %d:%d sala %d posti %d",
        &ev[j].ora.minuti,
        &ev[j].sala.sala,
        &ev[j].sala.posti);
+       #ifdef DEBUG
+      if (ev[j].sala.posti < 0)
+      {
+      printf("errore:%s, %d/%d/%d ore %d:%d, sala %d posti disponibili %d\n è negataivo",ev[j].spettacolo, ev[j].data.giorno, ev[j].data.mese, ev[j].data.anno, ev[j].ora.ora, ev[j].ora.minuti, ev[j].sala.sala, ev[j].sala.posti);
+              
+      }
+      
+       #endif
       //printf("%d, %d\n", ev[j].ora.ora, ev[j].sala.posti);
       j++; // incremento il numero di righe
    }
@@ -126,14 +141,24 @@ void cercaPrenotazioni(struct evento proiezioni[], int n_proi, struct evento pre
    {
       for (int j = 0; j < n_pren; j++)
       {
+         #ifdef DEBUG
+         //printf("i = %d| j = %d| %s, %d/%d/%d ore %d:%d, sala %d posti disponibili %d\n",i,j,proiezioni[i].spettacolo, proiezioni[i].data.giorno, proiezioni[i].data.mese, proiezioni[i].data.anno, proiezioni[i].ora.ora, proiezioni[i].ora.minuti, proiezioni[i].sala.sala, proiezioni[i].sala.posti);
+         //printf("i = %d| j = %d| %s, %d/%d/%d ore %d:%d, sala %d posti prenotati %d\n",i,j,prenotazioni[j].spettacolo, prenotazioni[j].data.giorno, prenotazioni[j].data.mese, prenotazioni[j].data.anno, prenotazioni[j].ora.ora, prenotazioni[j].ora.minuti, prenotazioni[j].sala.sala, prenotazioni[j].sala.posti);   
+         #endif
           // fai la comparazione tra tutti i parametri tranne id
-         if (proiezioni[i].data.giorno == prenotazioni[j].data.giorno && proiezioni[i].data.mese == prenotazioni[j].data.mese && proiezioni[i].data.anno == prenotazioni[j].data.anno && proiezioni[i].ora.ora == prenotazioni[j].ora.ora && proiezioni[i].ora.minuti == prenotazioni[j].ora.minuti && proiezioni[i].sala.sala == prenotazioni[j].sala.sala)
+          if (!strcmp(proiezioni[i].spettacolo, prenotazioni[j].spettacolo) &&
+    proiezioni[i].data.giorno == prenotazioni[j].data.giorno &&
+    proiezioni[i].data.mese == prenotazioni[j].data.mese &&
+    proiezioni[i].data.anno == prenotazioni[j].data.anno &&
+    proiezioni[i].ora.ora == prenotazioni[j].ora.ora &&
+    proiezioni[i].ora.minuti == prenotazioni[j].ora.minuti &&
+    proiezioni[i].sala.sala == prenotazioni[j].sala.sala)
+
          {
             proiezioni[i].sala.posti = proiezioni[i].sala.posti - prenotazioni[j].sala.posti;
+            //printf("corrispondenza, nuovi posti disponibili: %d\n", proiezioni[i].sala.posti);
          }
-         
       }
-      
    }
 }
 
